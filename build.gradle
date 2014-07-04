@@ -1,0 +1,26 @@
+apply plugin: 'idea'
+apply plugin: 'scala'
+apply plugin: 'scalatest'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.maiflai:gradle-scalatest:0.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.1'
+
+    testCompile 'org.scalatest:scalatest_2.11:2.2.0'
+    testRuntime 'org.pegdown:pegdown:1.1.0'
+}
